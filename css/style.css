@@ -23,8 +23,11 @@ a {
 li {
    list-style-type: none;
 }
-
-.nav-list a:hover {
+.active {
+    background-color: #cfe080;
+    color: rgb(136, 136, 152);
+}
+.nav-list a:hover:not(.active) {
     background-color: rgb(60, 40, 10);
     color: rgb(226, 212, 212);
 
@@ -51,31 +54,34 @@ h2 {
 
 /* Media queries */
 /* Ipad max 700px */
-@media and (max-width: 700px) {
+@media (max-width: 700px) {
     .nav-list {
         width: 100%;
         height: auto;
         position: relative;
-    }
-    a {
-        float: right;
+        padding: 0;
 
     }
+
+   
 }
 
 /* Mobile phone max 400px */
-@media (max-width: 400px){
+@media (max-width: 450px){
     .nav-list {
         width: 100vw;
         height: auto;
         position: relative;
+        padding: 0;
     }
-
+    h1, h2 {
+        font-size: 30px;
+    }
     main {
-        margin-left: 0px;
+        margin-left: 0;
+        margin-right:0;
         height: 100vh;
         width: 100%;
-        padding: 0;
         padding-top: 1px;
         background-color: rgb(238, 209, 151);
         display: flex;
